@@ -1,0 +1,23 @@
+-- Beispiel neue Insert Abfrage. hausname entweder ein Wert oder DEFAULT
+INSERT INTO t_gaeste(p_gast_nr, vorname, name, f_party_id, hausname)
+VALUES (11, 'Leo', 'A.', '1', DEFAULT )
+
+-- Playlist aus Songs mit votes, die nur von gaesten mit hausnamen kommen
+SELECT (SELECT COUNT(*) FROM t_gaeste_musik_votet, t_gaeste WHERE t_gaeste_musik_votet.pf_musik_nr= m.p_musik_nr AND t_gaeste.p_gast_nr = t_gaeste_musik_votet.pf_gast_nr AND t_gaeste.hausname IS NOT NULL) AS Votes ,m.p_musik_nr, m.Titel, m.Interpret, m.Genre, m.f_gast_nr
+FROM t_gaeste_musik_votet AS v, t_musik AS m
+GROUP BY m.p_musik_nr
+HAVING Votes > 0
+ORDER BY Votes DESC;
+
+-- Playlist mit allen Songs mit Votes, die nur vom Adel sind. auch die lieder ohne Votes
+SELECT (SELECT COUNT(*) FROM t_gaeste_musik_votet, t_gaeste WHERE t_gaeste_musik_votet.pf_musik_nr= m.p_musik_nr AND t_gaeste.p_gast_nr = t_gaeste_musik_votet.pf_gast_nr AND t_gaeste.hausname IS NOT NULL) AS Votes ,m.p_musik_nr, m.Titel, m.Interpret, m.Genre, m.f_gast_nr
+FROM t_gaeste_musik_votet AS v, t_musik AS m
+GROUP BY m.p_musik_nr
+ORDER BY Votes DESC;
+
+-- Gibt alle lieder eines spezifischen gastes an, auch die ohne Votes
+SELECT (SELECT COUNT(*) FROM t_gaeste_musik_votet, t_gaeste WHERE t_gaeste_musik_votet.pf_musik_nr= m.p_musik_nr AND t_gaeste.p_gast_nr = t_gaeste_musik_votet.pf_gast_nr AND t_gaeste.hausname IS NOT NULL) AS Votes, m.p_musik_nr, m.Titel, m.Interpret, m.Genre, m.f_gast_nr
+FROM t_gaeste_musik_votet AS v, t_musik AS m
+WHERE m.f_gast_nr = 1
+GROUP BY m.p_musik_nr
+ORDER BY Votes DESC;

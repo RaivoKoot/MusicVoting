@@ -1,0 +1,2 @@
+--- Attribut Hausname der gaeste tabelle hinzufugen
+ALTER TABLE t_gaeste ADD hausname VARCHAR(20);

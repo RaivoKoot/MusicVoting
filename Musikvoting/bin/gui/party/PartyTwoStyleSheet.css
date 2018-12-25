@@ -1,0 +1,48 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.jfx-button {
+	-fx-background-color: white;
+}
+
+.jfx-button:hover{
+	-fx-background-color:rgb(191,255,255);
+}
+
+.jfx-button .jfx-rippler{
+	-jfx-rippler-fill:rgb(43,159,255) ;
+}
+
+
+.background{
+	-fx-background-color: transparent;
+}
+
+.jfx-tab-pane {
+	-fx-text-fill: black;
+}
+.jfx-tab-pane .headers-region {
+    -fx-background-color: white;
+}
+
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+.jfx-tab-pane:top .depth-container .tab-header-area .headers-region .tab-selected-line{
+	-fx-background-color: #c7c7c7;
+}
+
+.jfx-tab-pane .tab-header-area .jfx-rippler{
+    -jfx-rippler-fill: darkgray;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: black;
+    -fx-font-size: 14;
+}
+
+.tab {
+	-fx-background-radius:0.0;
+}
+
+

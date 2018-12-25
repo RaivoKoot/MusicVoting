@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundPane" maxHeight="600.0" maxWidth="899.0" minHeight="600.0" minWidth="899.0" opacity="0.0" prefHeight="600.0" prefWidth="899.0" style="-fx-background-color: transparent;" styleClass="background" stylesheets="@PartyTwoStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.party.PartyController">
+   <children>
+      <AnchorPane layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="-11.0" layoutY="6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="229.0" fitWidth="229.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/icon_itunes.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ImageView>
+                  <TitledPane prefHeight="116.0" prefWidth="215.0" text="Party Info">
+                     <content>
+                        <GridPane vgap="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.33332824707031" minWidth="10.0" prefWidth="65.66666793823242" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.00000381469727" minWidth="10.0" prefWidth="151.33333206176758" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Motto:" />
+                              <Label text="Datum:" GridPane.hgrow="NEVER" GridPane.rowIndex="1" />
+                              <Label text="Einlass:" GridPane.rowIndex="2" />
+                              <Label fx:id="lblMotto" text="90er" GridPane.columnIndex="1" />
+                              <Label fx:id="lblDatum" text="28.09.2017" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="lblEinlass" text="22:00" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane prefHeight="116.0" text="Location">
+                     <content>
+                        <GridPane hgap="5.0" vgap="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="61.33332824707031" minWidth="10.0" prefWidth="61.33332824707031" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="150.6666717529297" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Ort:" />
+                              <Label text="Adresse:" GridPane.rowIndex="1" />
+                              <Label text="Location:" GridPane.rowIndex="2" />
+                              <Label fx:id="lblOrt" text="Berlin" GridPane.columnIndex="1" />
+                              <Label fx:id="lblAdresse" text="Wilmersdorfer Strasse 22" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="lblLocation" text="Monkey Bar" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane prefHeight="116.0" text="Account">
+                     <content>
+                        <GridPane hgap="5.0" vgap="10.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="63.666664123535156" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="0.0" prefWidth="148.33333587646484" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Vorname:" />
+                              <Label text="Nachname:" GridPane.rowIndex="1" />
+                              <Label text="ID: " GridPane.rowIndex="3" />
+                              <Label fx:id="lblVorname" text="Raivo" GridPane.columnIndex="1" />
+                              <Label fx:id="lblNachname" text="Koot" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="lblID" text="59" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Hausname:" GridPane.rowIndex="2" />
+                              <Label fx:id="lblHausname" text="Hausname" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="278.0" layoutY="47.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" text="Musikvoting">
+                     <font>
+                        <Font name="Arial Black" size="90.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#21c8ff" />
+                              <Stop color="#21c8ff" offset="0.007662835249042145" />
+                              <Stop color="#f02efa" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+               <effect>
+                  <Glow level="0.73" />
+               </effect>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="tabPaneHolder" layoutX="275.0" layoutY="239.0" prefHeight="322.0" prefWidth="600.0" AnchorPane.bottomAnchor="38.0" AnchorPane.topAnchor="240.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="275.0" layoutY="567.0" onAction="#clicked_logOut" prefHeight="25.0" prefWidth="600.0" text="Log Out">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/icon_logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <AnchorPane layoutX="278.0" layoutY="172.0">
+         <children>
+            <FlowPane hgap="2.5" layoutX="5.0" prefHeight="58.0" prefWidth="595.0">
+               <children>
+                  <Separator maxHeight="29.0" orientation="VERTICAL" prefHeight="200.0">
+                     <FlowPane.margin>
+                        <Insets right="7.0" />
+                     </FlowPane.margin>
+                  </Separator>
+                  <Label alignment="CENTER" text="Leonhard Blaesi">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#21c8ff" />
+                              <Stop color="#21c8ff" offset="0.007662835249042145" />
+                              <Stop color="#f02efa" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Separator maxHeight="29.0" orientation="VERTICAL" prefHeight="26.0" prefWidth="6.0">
+                     <FlowPane.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </FlowPane.margin>
+                  </Separator>
+                  <Label alignment="CENTER" text="Oguzhan Oezcan">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#21c8ff" />
+                              <Stop color="#21c8ff" offset="0.007662835249042145" />
+                              <Stop color="#f02efa" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Separator maxHeight="29.0" orientation="VERTICAL" prefHeight="200.0">
+                     <FlowPane.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </FlowPane.margin>
+                  </Separator>
+                  <Label alignment="CENTER" text="Raivo Koot">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#21c8ff" />
+                              <Stop color="#21c8ff" offset="0.007662835249042145" />
+                              <Stop color="#f02efa" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="26.0" prefWidth="6.0">
+                     <FlowPane.margin>
+                        <Insets left="10.0" />
+                     </FlowPane.margin>
+                  </Separator>
+               </children>
+               <effect>
+                  <Glow level="0.84" />
+               </effect>
+            </FlowPane>
+         </children>
+         <effect>
+            <DropShadow height="5.0" radius="2.0" spread="0.2" width="5.0" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

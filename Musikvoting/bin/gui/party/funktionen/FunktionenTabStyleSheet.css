@@ -1,0 +1,22 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.jfx-button {
+	-fx-background-color: white;
+}
+
+.jfx-button:hover{
+	-fx-background-color:rgb(191,255,255);
+}
+
+.jfx-button .jfx-rippler{
+	-jfx-rippler-fill:rgb(43,159,255) ;
+}
+
+.jfx-text-field{
+	-jfx-focus-color: lightblue;
+	-jfx-unfocus-color: gray;
+}
+
+
+
+

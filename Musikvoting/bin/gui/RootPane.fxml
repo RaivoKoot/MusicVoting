@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="800.0" maxWidth="962.0" minHeight="601.0" minWidth="900.0" prefHeight="606.0" prefWidth="905.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RootPaneController">
+	<children>
+		<ImageView fitHeight="672.0" fitWidth="1016.0" layoutX="-53.0" layoutY="-35.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../images/background.jpg" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="backgroundBlur" fitHeight="672.0" fitWidth="1016.0" layoutX="-43.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true" visible="false">
+			<image>
+				<Image url="@../../images/background.jpg" />
+			</image>
+			<effect>
+				<BoxBlur height="60.0" iterations="3" width="60.0" />
+			</effect>
+		</ImageView>
+		<BorderPane fx:id="mainPane" prefHeight="600.0" prefWidth="899.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 3;" />
+		<HBox layoutX="845.0" layoutY="24.0" spacing="5.0" AnchorPane.rightAnchor="-15.0" AnchorPane.topAnchor="-13.0">
+			<children>
+				<JFXButton buttonType="RAISED" onAction="#minimizePressed" styleClass="jfx-button-system" stylesheets="@LoginExitButtonsStyleSheet.css" text=" ">
+					<graphic>
+						<ImageView fitHeight="105.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../../images/close%20icons/minusWhite.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<JFXButton buttonType="RAISED" onAction="#settingsPressed" styleClass="jfx-button-system" stylesheets="@LoginExitButtonsStyleSheet.css" text=" ">
+					<graphic>
+						<ImageView fitHeight="105.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../../images/close%20icons/settingsWhite.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<JFXButton buttonType="RAISED" onAction="#exitPressed" styleClass="jfx-button-system" stylesheets="@LoginExitButtonsStyleSheet.css" text=" ">
+					<graphic>
+						<ImageView fitHeight="95.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../../images/close%20icons/closeWhite.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+			</children>
+		</HBox>
+	</children>
+	<effect>
+		<DropShadow />
+	</effect>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>
