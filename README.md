@@ -1,6 +1,8 @@
 # MusicVoting
 A Java multi-user voting system for parties using JavaFX and MySQL
 
+Including entity relationship diagram, relational schema, GUI mock ups and use case diagram in Musikvoting/DOKUMENTE
+
 
 ![alt text](https://github.com/RaivoKoot/MusicVoting/blob/master/LoginScreen.JPG)
 
